@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+langchain
+langchain-openai
+langchain-classic
+slack-bolt
+python-dotenv
+requests
+pydantic
