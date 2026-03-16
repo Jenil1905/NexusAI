@@ -8,7 +8,7 @@ function DecisionStream({ projectId, tasks, onRefresh }) {
         setProcessing(true);
         try {
             // Patch task to remove AI draft flag
-            await fetch(`http://localhost:8080/api/tasks/${taskId}/approve`, {
+            await fetch(`https://nexusai-backend-bjcf.onrender.com/api/tasks/${taskId}/approve`, {
                 method: 'POST', // We can implement a specific /approve endpoint or use PATCH
             });
             // For now, let's just use a PATCH to change status or flag
@@ -23,7 +23,7 @@ function DecisionStream({ projectId, tasks, onRefresh }) {
 
     const handleReject = async (taskId) => {
         try {
-            await fetch(`http://localhost:8080/api/tasks/${taskId}`, { method: 'DELETE' });
+            await fetch(`https://nexusai-backend-bjcf.onrender.com/api/tasks/${taskId}`, { method: 'DELETE' });
             onRefresh();
         } catch (error) {
             console.error('Failed to delete draft:', error);

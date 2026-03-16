@@ -33,7 +33,7 @@ function Dashboard() {
   }, []);
 
   const fetchProjects = () => {
-    fetch('http://localhost:8080/api/projects')
+    fetch('https://nexusai-backend-bjcf.onrender.com/api/projects')
       .then(response => response.json())
       .then(data => {
         setProjects(data);
@@ -49,7 +49,7 @@ function Dashboard() {
   };
 
   const createProject = (name, description) => {
-    fetch('http://localhost:8080/api/projects', {
+    fetch('https://nexusai-backend-bjcf.onrender.com/api/projects', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ name, description: description || 'New project created via Nexus AI' })
@@ -65,7 +65,7 @@ function Dashboard() {
   const refreshTasks = () => {
     if (activeProjectId) {
       setRefreshing(true);
-      fetch(`http://localhost:8080/api/tasks/project/${activeProjectId}`)
+      fetch(`https://nexusai-backend-bjcf.onrender.com/api/tasks/project/${activeProjectId}`)
         .then(response => response.json())
         .then(data => {
           if (Array.isArray(data)) {

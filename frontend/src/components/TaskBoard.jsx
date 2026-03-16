@@ -8,7 +8,7 @@ function TaskBoard({ tasks, onRefresh, isHistory = false }) {
     React.useEffect(() => {
         const fetchJiraConfig = async () => {
             try {
-                const response = await fetch('http://localhost:8080/api/tasks/jira-config');
+                const response = await fetch('https://nexusai-backend-bjcf.onrender.com/api/tasks/jira-config');
                 const data = await response.json();
                 setJiraConfig(data);
             } catch (error) {
@@ -35,7 +35,7 @@ function TaskBoard({ tasks, onRefresh, isHistory = false }) {
 
     const updateStatus = async (taskId, newStatus) => {
         try {
-            await fetch(`http://localhost:8080/api/tasks/${taskId}/status`, {
+            await fetch(`https://nexusai-backend-bjcf.onrender.com/api/tasks/${taskId}/status`, {
                 method: 'PATCH',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(newStatus)

@@ -44,7 +44,7 @@ const AskNexusModal = ({ isOpen, onClose, projectId }) => {
         setLoading(true);
 
         try {
-            const response = await fetch(`http://localhost:8080/api/projects/${projectId}/ask`, {
+            const response = await fetch(`https://nexusai-backend-bjcf.onrender.com/api/projects/${projectId}/ask`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ question: currentQuery })
@@ -104,10 +104,10 @@ const AskNexusModal = ({ isOpen, onClose, projectId }) => {
                                     {chatHistory.map((msg, idx) => (
                                         <div key={idx} className={`flex ${msg.type === 'user' ? 'justify-end' : 'justify-start'}`}>
                                             <div className={`max-w-[85%] rounded-2xl px-4 py-3 text-sm ${msg.type === 'user'
-                                                    ? 'bg-primary text-white rounded-br-none'
-                                                    : msg.type === 'error'
-                                                        ? 'bg-rose-500/10 text-rose-400 border border-rose-500/20 rounded-bl-none'
-                                                        : 'bg-slate-800 text-slate-200 rounded-bl-none'
+                                                ? 'bg-primary text-white rounded-br-none'
+                                                : msg.type === 'error'
+                                                    ? 'bg-rose-500/10 text-rose-400 border border-rose-500/20 rounded-bl-none'
+                                                    : 'bg-slate-800 text-slate-200 rounded-bl-none'
                                                 }`}>
                                                 {msg.type !== 'user' && (
                                                     <div className="flex items-center gap-2 mb-1">
