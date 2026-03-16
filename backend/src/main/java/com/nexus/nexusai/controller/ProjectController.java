@@ -62,7 +62,7 @@ public class ProjectController {
 
         // 3. POST to Python AI Service
         RestTemplate restTemplate = new RestTemplate();
-        String aiServiceUrl = "http://127.0.0.1:8000/ask";
+        String aiServiceUrl = "https://nexusai-engine.onrender.com/ask";
 
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
