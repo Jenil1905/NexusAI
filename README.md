@@ -1,6 +1,8 @@
 # Nexus AI: The Autonomous Project Oracle 🌌
 
-Nexus AI is a context-aware system built for **SpeedRun 2026**. It solves the "Documentation Debt" problem in remote engineering teams by bridging the gap between chaotic team chat (Slack/Discord) and structured project management (Jira/Linear).
+**[🟢 Live Demo: Try Nexus AI](https://nexus-ai-eight-lyart.vercel.app/)**
+
+Nexus AI is a context-aware system built to solve the "Documentation Debt" problem in remote engineering teams by bridging the gap between chaotic team chat (Slack/Discord) and structured project management (Jira/Linear).
 
 ## 🚀 The Core Vision
 In modern startups, 30% of project management time is wasted manually updating tickets based on decisions made in chat. Nexus AI monitors your communication streams, extracts concrete decisions using LLMs, and drafts project updates autonomously.
@@ -29,9 +31,9 @@ The "Brain" of the system.
 A premium, dark-mode React interface.
 - **Decision Feed**: Real-time stream of AI-detected suggestions.
 - **Project Board**: View and manage active backlog.
-- **Chat Simulator**: A built-in tool for judges to test the AI pipeline instantly.
+- **Chat Simulator**: A built-in tool to test the AI pipeline instantly.
 
-## 🏃 How to Run
+## 🏃 How to Run Locally
 
 ### Prerequisite: Set `.env` in `/ai-service`
 ```env
@@ -63,11 +65,3 @@ cd frontend
 npm install
 npm run dev
 ```
-
-## 👨‍💻 "Human-Like" Code Philosophy
-This project was built focusing on maintainability and readability. 
-- **Explicit Logic**: We avoided "magic" annotations where manual implementation provided more clarity (e.g., manual Getters/Setters in Java, long-form loops in Python).
-- **Descriptive Naming**: Every variable and function name describes its purpose in the business logic, not just its technical role.
-
----
-*Built for SpeedRun 2026 - From Zero to Day-1 Startup Infrastructure.*
